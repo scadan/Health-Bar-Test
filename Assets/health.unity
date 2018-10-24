@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cead68d2fa6b944aa1d05508be66e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lerpSpeed: 2
   content: {fileID: 1719880416}
   valueText: {fileID: 1632887833}
 --- !u!114 &38910452

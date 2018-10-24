@@ -8,6 +8,9 @@ public class BarScript : MonoBehaviour {
     private float fillAmount;
 
     [SerializeField]
+    private float lerpSpeed;
+
+    [SerializeField]
     private Image content;
 
     [SerializeField]
@@ -41,7 +44,7 @@ public class BarScript : MonoBehaviour {
     {
         if (fillAmount != content.fillAmount)
         {
-            content.fillAmount = fillAmount;
+            content.fillAmount = Mathf.Lerp(content.fillAmount, fillAmount, Time.deltaTime * lerpSpeed);
         }
 
         
