@@ -10,12 +10,17 @@ public class BarScript : MonoBehaviour {
     [SerializeField]
     private Image content;
 
+    [SerializeField]
+    private Text valueText;
+
     public float MaxValue { get; set; }
 
     public float Value
     {
         set
         {
+            string[] tmp = valueText.text.Split(':');
+            valueText.text = tmp[0] + ": " + value;
             fillAmount = Map(value, 0, MaxValue, 0, 1);
         }
     }
