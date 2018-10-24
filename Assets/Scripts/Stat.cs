@@ -1,13 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class Stat
 {
+    [SerializeField]
     private BarScript bar;
 
+    [SerializeField]
     private float maxVal;
 
+    [SerializeField]
     private float currentVal;
 
     public float CurrentVal
@@ -39,5 +44,11 @@ public class Stat
             bar.MaxValue = maxVal;
             
         }
+    }
+
+    public void Initialize()
+    {
+        this.MaxVal = maxVal;
+        this.CurrentVal = currentVal;
     }
 }

@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class BarScript : MonoBehaviour {
 
-
-    [SerializeField]
     private float fillAmount;
 
     [SerializeField]

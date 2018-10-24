@@ -8,15 +8,20 @@ public class Player : MonoBehaviour {
     private Stat health;
 
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        health.Initialize();
+    }
 
-        
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Update is called once per frame
+    void Update () {
+		if (Input.GetKeyDown(KeyCode.Q))
+        {
+            health.CurrentVal -= 10;
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            health.CurrentVal += 10;
+        }
+    }
 }
